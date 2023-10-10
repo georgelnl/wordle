@@ -1,7 +1,5 @@
 import random
 
-# next steps: had a check to handle when a user inputs a word shorter or longer than 5 letters=
-
 def game_instructions():
     print("""
 Wordle is a game in which you need to guess a five letter hidden word. You will have 6 attempts.
@@ -16,8 +14,6 @@ After each attempt, the game will tell you which letters in your guess are corre
 def get_words():
     # Load the file.
     with open('sgb-words.txt','r') as f:
-        ## This includes \n at the end of each line:
-        #words = f.readlines()
 
         # This drops the \n at the end of each line:
         words = f.read().splitlines()
